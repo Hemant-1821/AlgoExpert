@@ -4,6 +4,7 @@ class BST:
         self.value = value
         self.left = None
         self.right = None
+        print('BST created')
 
 # Average: Time - O(logn) space - O(1)
 # Worst: Time - O(n) space - O(1)
@@ -75,9 +76,9 @@ class BST:
                 break
         return self
 
-        def getMinValue(self):
-            currentNode = self
-            while currentNode.left is not None:
-                currentNode = currentNode.left
+    def getMinValue(self):
+        currentNode = self
+        while currentNode.left is not None:
+            currentNode = currentNode.left
 
-            return currentNode.value
+        return currentNode.value
