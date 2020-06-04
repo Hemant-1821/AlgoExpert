@@ -8,12 +8,14 @@ def GCD(a,b,origa,origb):
 
 N = list(map(int,input().split()))
 
-a = N[0]
-b = N[1]
-li = GCD(a,b,a,b)
+def LCM(N):
+    a = N[0]
+    b = N[1]
+    li = GCD(a,b,a,b)
 
-for i in range(2, len(N)):
+    for i in range(2, len(N)):
+        li = GCD(li,N[i],li,N[i])
+    
+    return li
 
-    li = GCD(li,N[i],li,N[i])
-
-print('LCM:',li)
+print('LCM:',LCM(N))
