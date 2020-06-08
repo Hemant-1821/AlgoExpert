@@ -1,3 +1,4 @@
+#Complexities Time-O(N^2) | Space-O(N)(in worst case)
 def threeNumberSum(array, targetSum):
     array.sort()
     triplets = []
