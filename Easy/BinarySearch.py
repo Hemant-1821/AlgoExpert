@@ -13,7 +13,7 @@ def binarySearchHelper(array, target, left, right):
     if target > potentialTarget:
         binarySearchHelper(array, target, middle+1, right)
     elif target < potentialTarget:
-        binarySearchHelper(array, target, array, middle-1)
+        binarySearchHelper(array, target, left, middle-1)
     else:
         return middle
 
